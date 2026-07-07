@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Users, Eye, EyeOff, Play, Settings2, SkipForward } from 'lucide-react';
 import { MOCK_WORDS } from './data/mockDatabase';
