@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-keralaRed: #E12A2A;
+  --color-keralaGold: #F2C14E;
+  --color-keralaGreen: #2D6A4F;
+  --color-darkBg: #121212;
+  
+  --animate-flip: flip 0.6s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+
+  @keyframes flip {
+    0% { transform: rotateY(0); }
+    100% { transform: rotateY(180deg); }
+  }
+}
+
+@utility glass {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+@utility perspective-1000 {
+  perspective: 1000px;
+}
+
+@utility preserve-3d {
+  transform-style: preserve-3d;
+}
+
+@utility backface-hidden {
+  backface-visibility: hidden;
+}
+
+body {
+  background-color: var(--color-darkBg);
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--color-keralaGold);
+  color: black;
+}
